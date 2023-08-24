@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
+from django.utils import timezone
 
 # Create your models here.
 class Category(models.Model):
@@ -24,4 +25,3 @@ class Item(models.Model):
         related_name='items',
         on_delete=models.CASCADE,
     )
-    created_at = models.DateTimeField(auto_now_add=True)
